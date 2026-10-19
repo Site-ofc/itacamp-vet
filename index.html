@@ -234,8 +234,8 @@
     .hours-list span { color: var(--muted); font-size: .85rem; }
     .hours-list strong { color: var(--navy); font-size: .88rem; font-weight: 700; text-align: right; }
     .hours-list small { display: block; margin-top: 4px; color: var(--muted); font-size: .74rem; font-weight: 500; }
-    .map-preview { position: relative; display: flex; min-height: 430px; align-self: start; aspect-ratio: 1.55 / 1; align-items: flex-end; overflow: hidden; border: 1px solid var(--line); border-radius: 14px; background: var(--blue-pale); }
-    .map-preview > img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain; object-position: center top; }
+    .map-preview { position: relative; display: flex; min-height: 430px; align-self: start; aspect-ratio: 1.2 / 1; align-items: flex-end; overflow: hidden; border: 1px solid var(--line); border-radius: 14px; background: var(--blue-pale); }
+    .map-preview > img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain; object-position: center; background: var(--blue-pale); }
     .map-preview::after { position: absolute; inset: 30% 0 0; content: ''; background: linear-gradient(180deg, transparent, rgba(8,35,59,.32)); pointer-events: none; }
     .map-preview-card { position: relative; z-index: 1; display: flex; width: calc(100% - 40px); align-items: center; gap: 18px; margin: 20px; padding: 20px; border: 1px solid rgba(255,255,255,.7); border-radius: 12px; background: rgba(251,248,243,.97); box-shadow: 0 12px 35px rgba(24,48,71,.14); }
     .map-preview-info { min-width: 0; flex: 1; }
@@ -318,7 +318,7 @@
       .gallery-caption { padding: 12px; font-size: .77rem; }
       .location-grid { grid-template-columns: 1fr; }
       .map-preview { display: block; min-height: 0; aspect-ratio: auto; overflow: visible; border: 0; background: transparent; }
-      .map-preview > img { position: relative; inset: auto; display: block; width: 100%; height: auto; aspect-ratio: 2.035 / 1; border: 1px solid var(--line); border-radius: 14px; }
+      .map-preview > img { position: relative; inset: auto; display: block; width: 100%; height: auto; aspect-ratio: auto; object-fit: contain; background: var(--blue-pale); border: 1px solid var(--line); border-radius: 14px; }
       .map-preview::after { display: none; }
       .map-preview-card { display: grid; grid-template-columns: 1fr; gap: 12px; margin: -24px 14px 0; width: calc(100% - 28px); padding: 16px; }
       .map-preview-card .button { grid-column: auto; width: 100%; }
@@ -458,11 +458,11 @@
             <figcaption class="gallery-caption"><strong>Recepção</strong>Área de atendimento da clínica.</figcaption>
           </figure>
           <figure class="gallery-card gallery-card--portrait">
-            <img src="assets/itacamp-consultorio-clinico.webp" alt="Consultório veterinário da Itacamp, com bancada, armários e mesa de atendimento" width="469" height="627" loading="lazy" decoding="async">
+            <img src="assets/itacamp-consultorio-clinico.webp" alt="Consultório veterinário da Itacamp, com bancada, armários e mesa de atendimento" width="1200" height="1600" loading="lazy" decoding="async">
             <figcaption class="gallery-caption"><strong>Consultório</strong>Espaço de atendimento veterinário.</figcaption>
           </figure>
           <figure class="gallery-card gallery-card--portrait">
-            <img src="assets/itacamp-centro-cirurgico.webp" alt="Centro cirúrgico veterinário da Itacamp, com mesa cirúrgica e equipamentos" width="469" height="531" loading="lazy" decoding="async">
+            <img src="assets/itacamp-centro-cirurgico.webp" alt="Centro cirúrgico veterinário da Itacamp, com mesa cirúrgica e equipamentos" width="1200" height="1600" loading="lazy" decoding="async">
             <figcaption class="gallery-caption"><strong>Centro cirúrgico</strong>Estrutura para procedimentos veterinários.</figcaption>
           </figure>
           <figure class="gallery-card">
@@ -478,11 +478,11 @@
             <figcaption class="gallery-caption"><strong>Área interna</strong>Vista do corredor e da sala de espera.</figcaption>
           </figure>
           <figure class="gallery-card gallery-card--portrait">
-            <img src="assets/itacamp-banho.webp" alt="Área de banho da Itacamp, com ducha e produtos de higiene para pets" width="270" height="541" loading="lazy" decoding="async">
+            <img src="assets/itacamp-banho.webp" alt="Área de banho da Itacamp, com ducha e produtos de higiene para pets" width="1200" height="1600" loading="lazy" decoding="async">
             <figcaption class="gallery-caption"><strong>Banho</strong>Espaço de higiene e cuidado dos pets.</figcaption>
           </figure>
           <figure class="gallery-card gallery-card--portrait">
-            <img src="assets/itacamp-tosa.webp" alt="Espaço de tosa da Itacamp com mesa de atendimento e equipamentos" width="269" height="541" loading="lazy" decoding="async">
+            <img src="assets/itacamp-tosa.webp" alt="Espaço de tosa da Itacamp com mesa de atendimento e equipamentos" width="1200" height="1600" loading="lazy" decoding="async">
             <figcaption class="gallery-caption"><strong>Tosa</strong>Área dedicada à tosa dos pets.</figcaption>
           </figure>
         </div>
@@ -552,7 +552,7 @@
             <a class="button button-outline" href="https://www.instagram.com/itacampclinica/" target="_blank" rel="noopener noreferrer">Ver Instagram da Itacamp</a>
           </div>
           <div class="map-preview">
-            <img src="assets/itacamp-fachada-upscaled-site.webp" alt="Fachada da Itacamp na Rua Pereira Tangerino, número 389" width="1789" height="879" loading="lazy">
+            <img src="assets/itacamp-consultorio-clinico.webp" alt="Consultório veterinário da Itacamp, com bancada, armários e mesa de atendimento" width="1200" height="1600" loading="lazy" decoding="async">
             <div class="map-preview-card">
 
               <div class="map-preview-info"><small>Jardim Guanabara · Campinas</small><strong>Itacamp Clínica Veterinária</strong><span>Rua Pereira Tangerino, 389</span></div>
