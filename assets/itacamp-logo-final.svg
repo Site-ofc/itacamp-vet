@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1600" height="520" viewBox="0 0 1600 520" role="img" aria-labelledby="title description">
+  <title id="title">Itacamp Veterinária, Banho e Tosa</title>
+  <desc id="description">Logo da Itacamp com cão e gato, e os nomes Dra. Maria Sílvia O. Magalhães e Dr. Rodrigo O. Magalhães.</desc>
+  <g fill="#0d4c82" font-family="Manrope, Arial, sans-serif" font-weight="800">
+    <text x="58" y="146" font-size="134" letter-spacing="1.5">ITACAMP</text>
+    <text x="58" y="250" font-size="91" letter-spacing="-1.5">VETERINÁRIA</text>
+    <text x="58" y="374" font-size="67" letter-spacing="0.4">BANHO &amp; TOSA</text>
+  </g>
+  <path d="M62 285 H850" fill="none" stroke="#e66f0b" stroke-width="7" stroke-linecap="round"/>
+  <g fill="#e66f0b" aria-hidden="true">
+    <ellipse cx="872" cy="279" rx="12" ry="16" transform="rotate(-25 872 279)"/>
+    <ellipse cx="900" cy="279" rx="12" ry="16" transform="rotate(25 900 279)"/>
+    <ellipse cx="886" cy="260" rx="11" ry="15"/>
+    <path d="M872 296 C872 284 900 284 900 296 C900 308 872 308 872 296Z"/>
+  </g>
+  <text x="62" y="443" fill="#123d63" font-family="Manrope, Arial, sans-serif" font-size="25" font-weight="700" letter-spacing="0.1">Dra. Maria Sílvia O. Magalhães — Dr. Rodrigo O. Magalhães</text>
+  <image x="1010" y="46" width="540" height="432" preserveAspectRatio="xMidYMid meet" href="itacamp-logo-pets.png" xlink:href="itacamp-logo-pets.png"/>
+</svg>

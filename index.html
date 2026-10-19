@@ -65,10 +65,10 @@
     /* Cabeçalho */
     .site-header { position: fixed; inset: 0 0 auto; z-index: 50; border-bottom: 1px solid transparent; background: rgba(255,253,249,.94); backdrop-filter: blur(16px); transition: box-shadow .2s ease, border-color .2s ease; }
     .site-header.scrolled { border-color: var(--line); box-shadow: 0 8px 24px rgba(17,55,86,.06); }
-    .nav { display: flex; min-height: 78px; align-items: center; justify-content: space-between; gap: 24px; }
+    .nav { display: flex; min-height: 96px; align-items: center; justify-content: space-between; gap: 24px; }
     .brand { display: inline-flex; flex: 0 0 auto; align-items: center; color: var(--navy); }
-    .brand-logo { display: block; width: 208px; height: auto; max-height: 58px; object-fit: contain; }
-    .footer-inner .brand-logo { width: 178px; max-height: 50px; }
+    .brand-logo { display: block; width: 260px; height: auto; max-height: 84px; object-fit: contain; }
+    .footer-inner .brand-logo { width: 220px; max-height: 72px; }
     .nav-links { display: flex; align-items: center; gap: clamp(18px, 2.4vw, 34px); color: #41566a; font-size: .88rem; font-weight: 600; }
     .nav-links a:hover { color: var(--orange); }
     .nav .button { min-height: 44px; padding-inline: 19px; }
@@ -153,9 +153,7 @@
     .gallery-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); align-items: start; gap: 18px; }
     .gallery-card { display: flex; flex-direction: column; margin: 0; overflow: hidden; border: 1px solid var(--line); border-radius: 13px; background: white; box-shadow: 0 10px 28px rgba(24,48,71,.045); }
     .gallery-card img { width: 100%; height: 245px; object-fit: cover; object-position: center; background: #f5f8fa; }
-    .gallery-card:nth-child(2) img { object-position: center 60%; }
-    .gallery-card:nth-child(3) img { object-position: center 52%; }
-    .gallery-card:nth-child(6) img { object-fit: contain; background: var(--blue-pale); }
+    .gallery-card--portrait img { height: 290px; object-fit: contain; background: var(--blue-pale); }
     .gallery-caption { padding: 16px 18px; color: var(--muted); background: white; font-size: .82rem; line-height: 1.55; }
     .gallery-caption strong { display: block; margin-bottom: 4px; color: var(--navy); font: 600 1.2rem/1.1 var(--editorial); }
 
@@ -279,8 +277,8 @@
     @media (max-width: 680px) {
       .wrap { width: min(100% - 36px, 540px); }
       .section { padding: 76px 0; }
-      .nav { min-height: 70px; }
-      .brand-logo { width: 176px; max-height: 49px; }
+      .nav { min-height: 78px; }
+      .brand-logo { width: 200px; max-height: 68px; }
       .mascot-section { padding: 36px 0; }
       .mascot-layout { grid-template-columns: 1fr; gap: 4px; padding: 20px 22px 28px; text-align: center; }
       .mascot-art { grid-row: 1; min-height: 255px; }
@@ -316,6 +314,7 @@
       .gallery { padding-top: 60px; }
       .gallery-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
       .gallery-card img { height: 165px; }
+      .gallery-card--portrait img { height: 240px; }
       .gallery-caption { padding: 12px; font-size: .77rem; }
       .location-grid { grid-template-columns: 1fr; }
       .map-preview { display: block; min-height: 0; aspect-ratio: auto; overflow: visible; border: 0; background: transparent; }
@@ -340,7 +339,7 @@
   <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
   <header class="site-header" id="siteHeader">
     <nav class="nav wrap" aria-label="Navegação principal">
-      <a class="brand" href="#inicio" aria-label="Itacamp Clínica Veterinária — início"><img class="brand-logo" src="assets/itacamp-logo-site-optimized.webp" alt="" width="640" height="201"></a>
+      <a class="brand" href="#inicio" aria-label="Itacamp Clínica Veterinária — início"><img class="brand-logo" src="assets/itacamp-logo-final.png" alt="Itacamp Veterinária e Banho &amp; Tosa, com Dra. Maria Sílvia O. Magalhães e Dr. Rodrigo O. Magalhães" width="1600" height="520"></a>
       <div class="nav-links" id="navLinks">
         <a href="#servicos">Serviços</a>
         <a href="#sobre">A clínica</a>
@@ -451,16 +450,20 @@
           <div class="accent-line"></div>
           <span class="eyebrow">Conheça a clínica</span>
           <h2 id="gallery-title">Um pouco da Itacamp</h2>
-          <p>Fotos da unidade, separadas das capturas de tela para apresentar os ambientes e a fachada.</p>
+          <p>Conheça os ambientes de atendimento, cirurgia, banho e tosa da unidade.</p>
         </div>
         <div class="gallery-grid">
           <figure class="gallery-card">
             <img src="assets/site-itacamp-recepcao.webp" alt="Recepção interna da Itacamp, com mesa de atendimento e plantas" width="1801" height="873" loading="lazy">
             <figcaption class="gallery-caption"><strong>Recepção</strong>Área de atendimento da clínica.</figcaption>
           </figure>
-          <figure class="gallery-card">
-            <img src="assets/itacamp-fachada-upscaled-site.webp" alt="Fachada externa azul da Itacamp, com portão e número 389" width="1789" height="879" loading="lazy">
-            <figcaption class="gallery-caption"><strong>Fachada</strong>Entrada da unidade na Rua Pereira Tangerino.</figcaption>
+          <figure class="gallery-card gallery-card--portrait">
+            <img src="assets/itacamp-consultorio-clinico.webp" alt="Consultório veterinário da Itacamp, com bancada, armários e mesa de atendimento" width="469" height="627" loading="lazy" decoding="async">
+            <figcaption class="gallery-caption"><strong>Consultório</strong>Espaço de atendimento veterinário.</figcaption>
+          </figure>
+          <figure class="gallery-card gallery-card--portrait">
+            <img src="assets/itacamp-centro-cirurgico.webp" alt="Centro cirúrgico veterinário da Itacamp, com mesa cirúrgica e equipamentos" width="469" height="531" loading="lazy" decoding="async">
+            <figcaption class="gallery-caption"><strong>Centro cirúrgico</strong>Estrutura para procedimentos veterinários.</figcaption>
           </figure>
           <figure class="gallery-card">
             <img src="assets/site-itacamp-area-externa.webp" alt="Área externa da clínica com bancos, plantas e telhado de cerâmica" width="1189" height="1323" loading="lazy">
@@ -474,9 +477,13 @@
             <img src="assets/site-itacamp-corredor.webp" alt="Corredor interno da clínica com cadeiras para espera" width="1192" height="1320" loading="lazy">
             <figcaption class="gallery-caption"><strong>Área interna</strong>Vista do corredor e da sala de espera.</figcaption>
           </figure>
-          <figure class="gallery-card">
-            <img src="assets/site-itacamp-letreiro.webp" alt="Letreiro da Itacamp Clínica Veterinária e Banho e Tosa" width="1207" height="1303" loading="lazy">
-            <figcaption class="gallery-caption"><strong>Identidade da clínica</strong>Letreiro da Itacamp.</figcaption>
+          <figure class="gallery-card gallery-card--portrait">
+            <img src="assets/itacamp-banho.webp" alt="Área de banho da Itacamp, com ducha e produtos de higiene para pets" width="270" height="541" loading="lazy" decoding="async">
+            <figcaption class="gallery-caption"><strong>Banho</strong>Espaço de higiene e cuidado dos pets.</figcaption>
+          </figure>
+          <figure class="gallery-card gallery-card--portrait">
+            <img src="assets/itacamp-tosa.webp" alt="Espaço de tosa da Itacamp com mesa de atendimento e equipamentos" width="269" height="541" loading="lazy" decoding="async">
+            <figcaption class="gallery-caption"><strong>Tosa</strong>Área dedicada à tosa dos pets.</figcaption>
           </figure>
         </div>
         <div class="tour360" aria-labelledby="tour360-title">
@@ -587,7 +594,7 @@
 
   <footer>
     <div class="wrap footer-inner">
-      <a class="brand" href="#inicio" aria-label="Voltar ao início"><img class="brand-logo" src="assets/itacamp-logo-site-optimized.webp" alt="" width="640" height="201"></a>
+      <a class="brand" href="#inicio" aria-label="Voltar ao início"><img class="brand-logo" src="assets/itacamp-logo-final.png" alt="Itacamp Veterinária e Banho &amp; Tosa, com Dra. Maria Sílvia O. Magalhães e Dr. Rodrigo O. Magalhães" width="1600" height="520"></a>
       <div class="footer-copy">Rua Pereira Tangerino, 389 · Jardim Guanabara · Campinas/SP<br>© <span id="year">2026</span> Itacamp Clínica Veterinária</div>
       <a class="footer-social" href="https://www.instagram.com/itacampclinica/" target="_blank" rel="noopener noreferrer" aria-label="Instagram da Itacamp">
         Instagram
