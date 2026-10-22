@@ -4,9 +4,9 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#123d63">
-  <meta name="description" content="Itacamp Clínica Veterinária em Campinas/SP. Consultório veterinário, vacinação, cirurgia, banho e tosa e farmácia pet. Rua Pereira Tangerino, 389.">
+  <meta name="description" content="Itacamp Clínica Veterinária em Campinas/SP. Consultório veterinário, vacinação, cirurgia, banho e tosa e farmácia pet em Campinas. Agende pelo WhatsApp.">
   <meta property="og:title" content="Itacamp Clínica Veterinária | Campinas-SP">
-  <meta property="og:description" content="Consultório veterinário, vacinação, cirurgia, banho e tosa e farmácia pet no Jardim Guanabara, Campinas.">
+  <meta property="og:description" content="Cuidado veterinário, banho e tosa e farmácia pet no Jardim Guanabara, Campinas. Fale com a equipe pelo WhatsApp.">
   <meta property="og:type" content="website">
   <meta property="og:image" content="https://juliaassis238.github.io/itacamp-vet/assets/itacamp-capa-facebook.jpg">
   <link rel="canonical" href="https://juliaassis238.github.io/itacamp-vet/">
@@ -136,6 +136,35 @@
     .service-card h3 { margin: 0 0 9px; color: var(--navy); font: 600 1.45rem/1 var(--editorial); letter-spacing: -.01em; }
     .service-card p { margin: 0; color: var(--muted); font-size: .93rem; line-height: 1.65; }
 
+    /* Equipe, avaliações e destaque de banho e tosa */
+    .service-card--featured { border-color: rgba(183,123,85,.72); background: linear-gradient(150deg, #fffaf4 0%, #f5ece4 100%); box-shadow: 0 12px 30px rgba(183,123,85,.10); }
+    .service-card--featured::before { height: 4px; }
+    .service-card-link { display: inline-flex; align-items: center; gap: 8px; margin-top: 20px; color: #986544; font-size: .82rem; font-weight: 700; }
+    .service-card-link span { font-size: 1.1rem; transition: transform .2s ease; }
+    .service-card-link:hover span { transform: translateX(4px); }
+    .team { background: rgba(255,255,255,.94); }
+    .team-grid { display: grid; grid-template-columns: 1.08fr .92fr; align-items: start; gap: clamp(34px, 7vw, 92px); }
+    .team-copy h2 { max-width: 590px; margin: 12px 0 18px; color: var(--navy-deep); font: 600 clamp(2.5rem, 4.5vw, 3.8rem)/.98 var(--editorial); letter-spacing: -.025em; }
+    .team-intro { max-width: 640px; margin: 0; color: var(--muted); font-size: 1rem; line-height: 1.8; }
+    .doctor-card, .team-panel, .review-card { border: 1px solid var(--line); border-radius: 14px; background: linear-gradient(150deg, #fff 0%, #fcfaf7 100%); box-shadow: 0 10px 28px rgba(24,48,71,.045); }
+    .doctor-card { margin-top: 30px; padding: 28px 30px; }
+    .doctor-role { display: block; margin-bottom: 9px; color: #9b6b4d; font-size: .72rem; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; }
+    .doctor-card h3, .team-panel h3, .review-card h3 { margin: 0 0 14px; color: var(--navy); font: 600 1.75rem/1.05 var(--editorial); }
+    .doctor-card p, .review-card p { margin: 0 0 12px; color: var(--muted); font-size: .92rem; line-height: 1.72; }
+    .doctor-card p:last-child, .review-card p:last-child { margin-bottom: 0; }
+    .team-side { display: grid; gap: 18px; }
+    .team-panel { padding: 29px; }
+    .team-list { display: grid; gap: 0; margin: 22px 0 0; padding: 0; list-style: none; }
+    .team-list li { display: flex; align-items: baseline; justify-content: space-between; gap: 16px; padding: 15px 0; border-top: 1px solid var(--line); }
+    .team-list strong { color: var(--navy); font-size: .92rem; }
+    .team-list span { color: var(--muted); font-size: .8rem; text-align: right; }
+    .review-card { padding: 29px; border-color: #d9c2b0; background: linear-gradient(145deg, #f7eee7 0%, #fffaf5 100%); }
+    .review-card .button { margin-top: 20px; }
+    .social-links { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 18px; }
+    .social-links .button { flex: 1 1 auto; }
+    .footer-social { display: flex; flex-wrap: wrap; gap: 16px; color: #d9b395; font-size: .85rem; font-weight: 700; }
+    .footer-social a:hover { color: white; }
+
     /* Sobre e fotografias reais */
     .about { overflow: hidden; background: rgba(237,242,243,.93); }
     .about-grid { display: grid; grid-template-columns: .95fr 1.05fr; align-items: center; gap: clamp(42px, 8vw, 100px); }
@@ -192,6 +221,31 @@
     .tour360-dot[aria-current="true"] { width: 24px; background: var(--orange); }
     .tour360-close { margin-top: 16px; padding: 9px 14px; border: 1px solid rgba(18,61,99,.22); border-radius: 999px; color: var(--navy); background: rgba(255,255,255,.55); font-size: .76rem; font-weight: 700; cursor: pointer; }
     .tour360-close:hover { background: white; }
+    @media (max-width: 900px) {
+      .nav-links { gap: 15px; font-size: .81rem; }
+      .nav .button { display: none; }
+      .hero { min-height: 720px; background-position: right center; background-size: 76% auto; }
+      .mascot-layout { grid-template-columns: 1fr; gap: 12px; padding-inline: 38px; }
+      .mascot-copy { align-self: start; }
+      .hero-content { width: min(370px, 48%); }
+      .hero h1 { font-size: clamp(2.5rem, 5.8vw, 3.6rem); }
+      .hero::before { background: linear-gradient(90deg, rgba(8,35,59,.96) 0%, rgba(11,45,73,.9) 58%, rgba(11,45,73,.58) 100%), repeating-linear-gradient(135deg, rgba(224,239,249,.018) 0 1px, transparent 1px 7px); }
+      .service-grid { grid-template-columns: repeat(2, 1fr); }
+      .about-grid { gap: 44px; }
+      .location-grid { grid-template-columns: 1fr; gap: 24px; }
+      .gallery-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .gallery-card img { height: 220px; }
+    }
+    @media (min-width: 901px) and (max-width: 1100px) {
+      .hero { background-position: right center; background-size: 76% auto; }
+      .hero-content { width: min(410px, 48%); }
+      .hero h1 { font-size: clamp(2.7rem, 5.5vw, 3.5rem); }
+      .map-preview { min-height: 0; }
+    }
+    @media (max-width: 900px) {
+      .team-grid { grid-template-columns: 1fr; gap: 34px; }
+      .team-copy h2 { max-width: 680px; }
+    }
     @media (max-width: 680px) {
       .tour360 { margin-top: 54px; padding: 20px 16px 18px; border-radius: 17px; }
       .tour360-heading { margin-bottom: 20px; }
@@ -253,27 +307,6 @@
     .footer-social { display: inline-flex; align-items: center; gap: 8px; color: var(--navy); font-size: .88rem; font-weight: 700; }
 
 
-    @media (max-width: 900px) {
-      .nav-links { gap: 15px; font-size: .81rem; }
-      .nav .button { display: none; }
-      .hero { min-height: 720px; background-position: right center; background-size: 76% auto; }
-      .mascot-layout { grid-template-columns: 1fr; gap: 12px; padding-inline: 38px; }
-      .mascot-copy { align-self: start; }
-      .hero-content { width: min(370px, 48%); }
-      .hero h1 { font-size: clamp(2.5rem, 5.8vw, 3.6rem); }
-      .hero::before { background: linear-gradient(90deg, rgba(8,35,59,.96) 0%, rgba(11,45,73,.9) 58%, rgba(11,45,73,.58) 100%), repeating-linear-gradient(135deg, rgba(224,239,249,.018) 0 1px, transparent 1px 7px); }
-      .service-grid { grid-template-columns: repeat(2, 1fr); }
-      .about-grid { gap: 44px; }
-      .location-grid { grid-template-columns: 1fr; gap: 24px; }
-      .gallery-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-      .gallery-card img { height: 220px; }
-    }
-    @media (min-width: 901px) and (max-width: 1100px) {
-      .hero { background-position: right center; background-size: 76% auto; }
-      .hero-content { width: min(410px, 48%); }
-      .hero h1 { font-size: clamp(2.7rem, 5.5vw, 3.5rem); }
-      .map-preview { min-height: 0; }
-    }
     @media (max-width: 680px) {
       .wrap { width: min(100% - 36px, 540px); }
       .section { padding: 76px 0; }
@@ -343,11 +376,13 @@
       <div class="nav-links" id="navLinks">
         <a href="#servicos">Serviços</a>
         <a href="#sobre">A clínica</a>
+        <a href="#equipe">Equipe</a>
+        <a href="#avaliacoes">Avaliações</a>
         <a href="#galeria">Imagens</a>
         <a href="#localizacao">Localização</a>
         <a href="#contato">Contato</a>
       </div>
-      <a class="button button-primary" href="tel:+551932134400">Agendar por telefone</a>
+      <a class="button button-primary" href="https://wa.me/5519996015903?text=Ol%C3%A1%2C%20Itacamp!%20Gostaria%20de%20agendar%20um%20atendimento." target="_blank" rel="noopener noreferrer">Agendar pelo WhatsApp</a>
       <button class="menu-toggle" id="menuToggle" type="button" aria-label="Abrir menu" aria-controls="navLinks" aria-expanded="false">
         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
       </button>
@@ -362,7 +397,7 @@
           <h1 id="hero-title">Cuidado de verdade para quem <span>faz parte da família.</span></h1>
           <p class="hero-lead">Consultório veterinário, vacinação, cirurgia, banho e tosa e farmácia pet em um só lugar. Fale com a Itacamp para agendar e consultar os serviços disponíveis para o seu pet.</p>
           <div class="hero-actions">
-            <a class="button button-whatsapp" href="https://wa.me/5519997914145?text=Ol%C3%A1%2C%20Itacamp!%20Gostaria%20de%20agendar%20um%20atendimento." target="_blank" rel="noopener noreferrer" aria-label="Chamar a Itacamp no WhatsApp pelo número (19) 99791-4145">
+            <a class="button button-whatsapp" href="https://wa.me/5519996015903?text=Ol%C3%A1%2C%20Itacamp!%20Gostaria%20de%20agendar%20um%20atendimento." target="_blank" rel="noopener noreferrer" aria-label="Chamar a Itacamp no WhatsApp pelo número (19) 99601-5903">
               Falar pelo WhatsApp
             </a>
             <a class="button button-light" href="#servicos">Conhecer serviços</a>
@@ -412,9 +447,9 @@
             <span class="service-number">02</span>
             <h3>Cirurgia</h3><p>Serviço indicado após avaliação veterinária. Converse com a equipe para informações sobre procedimentos e disponibilidade.</p>
           </article>
-          <article class="service-card">
-            <span class="service-number">03</span>
-            <h3>Banho e tosa</h3><p>Atendimento mediante agendamento. Confira os horários abaixo e consulte a equipe sobre a disponibilidade.</p>
+          <article class="service-card service-card--featured">
+            <span class="service-number">03 · DESTAQUE</span>
+            <h3>Banho e tosa</h3><p>Um cuidado especial para deixar seu pet limpo, confortável e ainda mais bonito. Agende pelo WhatsApp e consulte a disponibilidade da equipe.</p><a class="service-card-link" href="#contato">Agendar banho e tosa <span aria-hidden="true">→</span></a>
           </article>
           <article class="service-card">
             <span class="service-number">04</span>
@@ -440,6 +475,40 @@
           <p>A Itacamp reúne consultório veterinário, vacinação, cirurgia, banho e tosa e farmácia pet no Jardim Guanabara, em Campinas. A clínica também divulga estacionamento próprio.</p>
           <p>Os detalhes de cada atendimento, os horários e a disponibilidade dos serviços podem ser confirmados diretamente com a equipe por telefone.</p>
           <div class="about-name"><span class="dot" aria-hidden="true"></span><div><strong>Itacamp Clínica Veterinária</strong><span>Rua Pereira Tangerino, 389<br>Jardim Guanabara · Campinas/SP</span></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section team" id="equipe" aria-labelledby="team-title">
+      <div class="wrap team-grid">
+        <div class="team-copy">
+          <div class="accent-line"></div>
+          <span class="eyebrow">Nossa equipe</span>
+          <h2 id="team-title">Experiência, técnica e cuidado humano.</h2>
+          <p class="team-intro">A Itacamp conta com profissionais comprometidos com a saúde e o bem-estar dos animais, oferecendo atendimento individualizado e uma relação de confiança com cada tutor.</p>
+          <div class="doctor-card">
+            <span class="doctor-role">Clínica geral</span>
+            <h3>Dra. Maria Silvia Oliveira de Magalhães</h3>
+            <p>Graduada em Medicina Veterinária pela Faculdade de Ciências Agrárias e Veterinárias da Universidade Estadual Paulista (UNESP) – Campus de Jaboticabal, com formação concluída em 1982. Em 1986, inaugurou a clínica veterinária com o propósito de oferecer um atendimento pautado na excelência, ética e dedicação à saúde e ao bem-estar animal.</p>
+            <p>Com décadas de experiência, construiu uma trajetória marcada pelo compromisso com a medicina veterinária de qualidade, aliando conhecimento técnico, atualização constante e atendimento humanizado. Sua missão é proporcionar cuidado individualizado a cada paciente, fortalecendo uma relação de confiança, respeito e transparência com os tutores e seus animais.</p>
+          </div>
+        </div>
+        <div class="team-side">
+          <div class="team-panel">
+            <span class="doctor-role">Equipe cirúrgica</span>
+            <h3>Profissionais ao lado do seu pet</h3>
+            <ul class="team-list">
+              <li><strong>Aline Delfine</strong><span>Cirurgia</span></li>
+              <li><strong>Rodrigo O. Magalhães</strong><span>Anestesista</span></li>
+              <li><strong>Maria Silvia O. Magalhães</strong><span>Clínica geral</span></li>
+            </ul>
+          </div>
+          <div class="review-card" id="avaliacoes">
+            <span class="doctor-role">Avaliações e mensagens</span>
+            <h3>O carinho de quem já conhece a Itacamp.</h3>
+            <p>Confira as avaliações e mensagens dos tutores no Google e compartilhe também a sua experiência com a nossa equipe.</p>
+            <a class="button button-primary" href="https://www.google.com/search?q=Itacamp+Cl%C3%ADnica+Veterin%C3%A1ria+Campinas+avalia%C3%A7%C3%B5es" target="_blank" rel="noopener noreferrer">Ver avaliações no Google</a>
+          </div>
         </div>
       </div>
     </section>
@@ -539,7 +608,7 @@
               <div><small>Telefone / agendamento</small><a href="tel:+551932134400">(19) 3213-4400</a></div>
             </div>
             <div class="contact-row">
-              <div><small>WhatsApp</small><a href="https://wa.me/5519997914145?text=Ol%C3%A1%2C%20Itacamp!%20Gostaria%20de%20agendar%20um%20atendimento." target="_blank" rel="noopener noreferrer">(19) 99791-4145</a></div>
+              <div><small>WhatsApp</small><a href="https://wa.me/5519996015903?text=Ol%C3%A1%2C%20Itacamp!%20Gostaria%20de%20agendar%20um%20atendimento." target="_blank" rel="noopener noreferrer">(19) 99601-5903</a></div>
             </div>
             <div class="contact-row">
               <div><small>Contato alternativo</small><a href="tel:+551932134404">(19) 3213-4404</a></div>
@@ -548,8 +617,8 @@
               <div><small>Como chegar</small><a href="https://www.google.com/maps/search/?api=1&amp;query=Itacamp+Cl%C3%ADnica+Veterin%C3%A1ria%2C+Rua+Pereira+Tangerino+389%2C+Campinas" target="_blank" rel="noopener noreferrer">Abrir no Google Maps</a></div>
             </div>
 
-            <a class="button button-whatsapp address-whatsapp" href="https://wa.me/5519997914145?text=Ol%C3%A1%2C%20Itacamp!%20Gostaria%20de%20agendar%20um%20atendimento." target="_blank" rel="noopener noreferrer">Conversar pelo WhatsApp</a>
-            <a class="button button-outline" href="https://www.instagram.com/itacampclinica/" target="_blank" rel="noopener noreferrer">Ver Instagram da Itacamp</a>
+            <a class="button button-whatsapp address-whatsapp" href="https://wa.me/5519996015903?text=Ol%C3%A1%2C%20Itacamp!%20Gostaria%20de%20agendar%20um%20atendimento." target="_blank" rel="noopener noreferrer">Conversar pelo WhatsApp</a>
+            <div class="social-links" aria-label="Redes sociais da Itacamp"><a class="button button-outline" href="https://www.instagram.com/itacampclinica/" target="_blank" rel="noopener noreferrer">Instagram</a><a class="button button-outline" href="https://www.facebook.com/itacampclinicaveterinaria" target="_blank" rel="noopener noreferrer">Facebook</a></div>
           </div>
           <div class="map-preview">
             <img src="assets/itacamp-consultorio-clinico.webp" alt="Consultório veterinário da Itacamp, com bancada, armários e mesa de atendimento" width="1200" height="1600" loading="lazy" decoding="async">
@@ -586,7 +655,7 @@
         </div>
         <div class="contact-strip" id="contato">
           <div><h3>Vamos conversar sobre o seu pet?</h3><p>Chame a equipe da Itacamp no WhatsApp para consultar horários, agendamentos e serviços.</p></div>
-          <a class="button button-whatsapp" href="https://wa.me/5519997914145?text=Ol%C3%A1%2C%20Itacamp!%20Gostaria%20de%20agendar%20um%20atendimento." target="_blank" rel="noopener noreferrer">Abrir WhatsApp</a>
+          <a class="button button-whatsapp" href="https://wa.me/5519996015903?text=Ol%C3%A1%2C%20Itacamp!%20Gostaria%20de%20agendar%20um%20atendimento." target="_blank" rel="noopener noreferrer">Abrir WhatsApp</a>
         </div>
       </div>
     </section>
@@ -596,9 +665,7 @@
     <div class="wrap footer-inner">
       <a class="brand" href="#inicio" aria-label="Voltar ao início"><img class="brand-logo" src="assets/itacamp-logo-final.png" alt="Itacamp Veterinária e Banho &amp; Tosa, com Dra. Maria Sílvia O. Magalhães e Dr. Rodrigo O. Magalhães" width="1600" height="520"></a>
       <div class="footer-copy">Rua Pereira Tangerino, 389 · Jardim Guanabara · Campinas/SP<br>© <span id="year">2026</span> Itacamp Clínica Veterinária</div>
-      <a class="footer-social" href="https://www.instagram.com/itacampclinica/" target="_blank" rel="noopener noreferrer" aria-label="Instagram da Itacamp">
-        Instagram
-      </a>
+      <div class="footer-social"><a href="https://www.instagram.com/itacampclinica/" target="_blank" rel="noopener noreferrer" aria-label="Instagram da Itacamp">Instagram</a><a href="https://www.facebook.com/itacampclinicaveterinaria" target="_blank" rel="noopener noreferrer" aria-label="Facebook da Itacamp Clínica Veterinária">Facebook</a></div>
     </div>
   </footer>
 
